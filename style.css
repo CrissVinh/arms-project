@@ -1,0 +1,118 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+/* Background tòa nhà */
+.auth-page {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card-horizontal {
+    display: flex;
+    background: white;
+    width: 850px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+.brand-side {
+    flex: 1;
+    background: #4b2c20; /* Màu nâu giống mẫu DuocGia */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.brand-side i { font-size: 60px; margin-bottom: 20px; }
+
+.form-side { flex: 1.2; padding: 50px; }
+
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-box i { position: absolute; left: 15px; top: 15px; color: #888; }
+
+.input-box input {
+    width: 100%;
+    padding: 12px 15px 12px 45px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background: #4b2c20;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.link-btn {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #28a745;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* GIAO DIỆN DASHBOARD SAU KHI LOGIN */
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+    background: #f4f7f6;
+}
+
+.sidebar {
+    width: 260px;
+    background: #4b2c20;
+    color: white;
+    padding: 20px 0;
+}
+
+.sidebar-header { text-align: center; padding-bottom: 20px; border-bottom: 1px solid #634336; }
+
+.menu-list { list-style: none; margin-top: 20px; }
+
+.menu-item {
+    padding: 15px 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu-item:hover { background: #634336; }
+
+.main-content { flex: 1; padding: 25px; overflow-y: auto; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.stat-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    border-bottom: 5px solid #007bff;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
