@@ -291,3 +291,133 @@ body {
     color: #777;
     font-weight: 500;
 }
+/* ====== TITLE ====== */
+h2 {
+    margin-top: 30px;
+    font-size: 22px;
+}
+
+/* ====== BUTTON ====== */
+button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: #6d3b1f;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #8b4a2a;
+}
+
+/* ====== TABLE ====== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* HEADER */
+thead {
+    background-color: #6d3b1f;
+    color: white;
+}
+
+th {
+    padding: 12px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* BODY */
+td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+/* HOVER ROW */
+tr:hover td {
+    color: #333; /* 🔥 giữ màu chữ không bị trắng */
+}
+/* ====== ACTION BUTTON ====== */
+td button {
+    background-color: #e74c3c;
+}
+
+td button:hover {
+    background-color: #c0392b;
+}
+
+/* ====== ADD BUTTON ====== */
+button:first-of-type {
+    margin-top: 10px;
+}
+/* ===== FORM THÊM CƯ DÂN ===== */
+.form-box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+/* input + select */
+.form-box input,
+.form-box select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+/* focus đẹp */
+.form-box input:focus,
+.form-box select:focus {
+    border-color: #6d3b1f;
+    box-shadow: 0 0 5px rgba(109,59,31,0.3);
+}
+
+/* nút thêm */
+.form-box button {
+    grid-column: span 5;
+    background-color: #6d3b1f;
+    color: white;
+    font-weight: 600;
+}
+
+.form-box button:hover {
+    background-color: #8b4a2a;
+}
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #4b2c20;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+}
+
+/* gạch chân xịn xịn */
+h1::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: #6d3b1f;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}

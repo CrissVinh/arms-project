@@ -14,8 +14,10 @@
                 <p style="font-size: 10px; opacity: 0.7;">Hệ thống quản lý tòa nhà</p>
             </div>
             <ul class="menu-list">
-                <li class="menu-item">📊 Tổng quan</li>
-                <li class="menu-item">👥 Quản lý cư dân</li>
+                <li class="menu-item" onclick="showHome()">📊 Tổng quan</li>
+                <li class="menu-item" onclick="showCuDan()">
+                    👥 Quản lý cư dân
+                </li>
                 <li class="menu-item">💳 Hóa đơn</li>
                 <li class="menu-item">🔔 Thông báo</li>
                 <li class="menu-item" onclick="location.href='index.html'" style="margin-top: auto; color: #ff7675;">🚪 Đăng xuất</li>
@@ -23,23 +25,59 @@
         </aside>
 
         <main class="main-content">
-            <h1>Chào mừng trở lại, Quản trị viên!</h1>
-            
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <h3>1,200</h3>
-                    <p>Cư dân</p>
-                </div>
-                <div class="stat-card">
-                    <h3>45</h3>
-                    <p>Phòng trống</p>
-                </div>
-                <div class="stat-card">
-                    <h3>12</h3>
-                    <p>Yêu cầu hỗ trợ</p>
+
+            <!-- HOME -->
+            <div id="home">
+                <h1>Chào mừng trở lại, Quản trị viên!</h1>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>1,200</h3>
+                        <p>Cư dân</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>45</h3>
+                        <p>Phòng trống</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>12</h3>
+                        <p>Yêu cầu hỗ trợ</p>
+                    </div>
                 </div>
             </div>
+
+            <!-- CƯ DÂN -->
+            <div id="cudan" style="display:none">
+                <h1>Quản lý cư dân</h1>
+
+                <div class="form-box">
+                    <input id="ten" placeholder="Họ tên">
+                    <input id="cccd" placeholder="CCCD">
+                    <input id="sdt" placeholder="SĐT">
+                    <input id="email" placeholder="Email">
+                    <select id="canho"></select>
+
+                    <button onclick="themCuDan()">➕ Thêm cư dân</button>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Họ tên</th>
+                            <th>CCCD</th>
+                            <th>SDT</th>
+                            <th>Email</th>
+                            <th>Căn hộ</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cudan-table"></tbody>
+                </table>
+            </div>
+
         </main>
     </div>
+    <script src="dashboard.js"></script>
 </body>
 </html>
